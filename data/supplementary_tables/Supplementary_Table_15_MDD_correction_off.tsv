@@ -1,0 +1,3 @@
+"comparison"	"n_block"	"left_uncorrected_phbc"	"right_uncorrected_phbc"	"delta_fraction"	"delta_pp"	"paired_jackknife_se_fraction"	"paired_jackknife_se_pp"	"ci95_low_pp"	"ci95_high_pp"	"z"	"p_two_sided"	"method"
+"MDD_EHR_minus_QUEST"	200	0.604941713020331	0.422581621093081	0.18236009192725	18.236009192725	0.0402165888374468	4.02165888374468	10.3535577805854	26.1184606048645	4.53444951943435	5.77539122262687e-06	"correction-off 200-block paired delete-one-block jackknife"
+"MDD_FINNGEN_minus_QUEST"	200	0.552238095373912	0.422581621093081	0.129656474280831	12.9656474280831	0.0448692368601205	4.48692368601205	4.17127700349948	21.7600178526667	2.88965187183892	0.00385668663601532	"correction-off 200-block paired delete-one-block jackknife"

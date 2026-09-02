@@ -1,0 +1,47 @@
+section	comparison	measure	estimate	se	ci95_low	ci95_high	p_two_sided	q_bh	notes
+target	SCZ_FINNGEN_R13_EXMORE	cases	15813	NA	NA	NA	NA	NA	FinnGen R13 KRA_PSY_SCHIZODEL_EXMORE; ICD-10 F20-F29
+target	SCZ_FINNGEN_R13_EXMORE	controls	355296	NA	NA	NA	NA	NA	Controls exclude KRA_PSY_ANYMENTAL
+target	SCZ_FINNGEN_R13_EXMORE	h2_observed	0.1363556618031	0.0127609820917577	NA	NA	NA	NA	Z=10.6853579781428
+target	SCZ_FINNGEN_R13_EXMORE	PHBC	0.530422772293815	0.0706106586509064	NA	NA	NA	NA	Official bias-corrected estimate; weight=0.9375
+cross_definition_rg	EXMORE minus PGC	rg	0.8677	0.0372	0.794788	0.940612	0.000375897675949236	NA	P tests rg=1; cross-trait intercept=0.0218 (SE=0.0087)
+cross_definition_rg	EXMORE minus narrow FinnGen	rg	0.8955	0.0481	0.801224	0.989776	0.0298136622054767	NA	P tests rg=1; cross-trait intercept=0.4980 (SE=0.0063)
+paired_PHBC	EXMORE minus PGC	corrected_delta_pp	3.45753558797114	6.95352824301787	-10.1713797683439	17.0864509442862	0.619023548293264	0.619023548293264	BH family contains the two EXMORE total-PHBC contrasts
+paired_PHBC	EXMORE minus narrow FinnGen	corrected_delta_pp	30.7152144011619	6.37479569674151	18.2206148355485	43.2098139667753	1.44839342376564e-06	2.89678684753129e-06	BH family contains the two EXMORE total-PHBC contrasts
+paired_PHBC	EXMORE minus PGC	correction_off_delta_pp	7.51497005749833	7.85440157938464	-7.87965703809556	22.9095971530922	0.338676013501352	NA	Uncorrected quadratic-form sensitivity
+paired_PHBC	EXMORE minus narrow FinnGen	correction_off_delta_pp	26.5294480774888	7.95431678477403	10.9389871793317	42.1199089756459	0.000852299494524205	NA	Uncorrected quadratic-form sensitivity
+profile	EXMORE minus PGC	mean_delta_rg	0.0423291059155114	0.0241433428518649	NA	NA	0.0795605958519339	NA	Directional test across 10 auxiliaries
+profile	EXMORE minus PGC	omnibus_chisq	14.485171500887	NA	NA	NA	0.151989072034539	NA	10 degrees of freedom
+profile	EXMORE minus narrow FinnGen	mean_delta_rg	0.202963830050438	0.0287879054779264	NA	NA	1.78511949508202e-12	NA	Directional test across 10 auxiliaries
+profile	EXMORE minus narrow FinnGen	omnibus_chisq	67.3418056394497	NA	NA	NA	1.4414847003432e-10	NA	10 degrees of freedom
+profile_component	EXMORE minus PGC	MDD_CLIN_PGC2025_delta_rg	0.158496116388917	0.0658780910090846	0.0293750580111112	0.287617174766723	0.0161326684881717	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	BD_PGC2021_delta_rg	0.0223410855452931	0.0379183636407465	-0.05197890719057	0.0966610782811562	0.555734446003009	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	PTSD_delta_rg	0.0641854875524088	0.039554699532455	-0.013341723531203	0.141712698636021	0.104653137109515	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	ANX_delta_rg	0.0654267914047649	0.0355142992162587	-0.00418123505910215	0.135034817868632	0.0654362280937908	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	ADHD_delta_rg	0.0482339601803742	0.0392518032465766	-0.0286995741829159	0.125167494543664	0.219133957472831	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	ASD_delta_rg	0.0520780908719539	0.0522105289845542	-0.0502545459377723	0.15441072768168	0.318539638884525	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	OCD_2025_delta_rg	-0.0146698686203107	0.048312274421644	-0.109361926486733	0.0800221892461115	0.761396975483821	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	AN_delta_rg	0.0409859544471556	0.0467019908929582	-0.0505499477030425	0.132521856597354	0.380157490379595	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	AUD_delta_rg	0.023701290974957	0.0464462387874839	-0.0673333370485114	0.114735918998425	0.60984469122688	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus PGC	CUD_2023_EUR_delta_rg	-0.0374878495904002	0.0395926758422815	-0.115089494241272	0.0401137950604715	0.34372134035231	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	MDD_CLIN_PGC2025_delta_rg	0.309240457143202	0.0747428106729453	0.162744548224229	0.455736366062175	3.5127262219749e-05	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	BD_PGC2021_delta_rg	0.171407680534308	0.0521666312268897	0.0691610833296042	0.273654277739012	0.0010170312768477	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	PTSD_delta_rg	0.280702100280654	0.0451579624664177	0.192192493846475	0.369211706714833	5.09973246866543e-10	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	ANX_delta_rg	0.265516951607152	0.0449550125045444	0.177405127098245	0.353628776116059	3.49916197268476e-09	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	ADHD_delta_rg	0.263004830084022	0.0458231022494413	0.173191549675117	0.352818110492927	9.49181359916935e-09	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	ASD_delta_rg	0.119146182116957	0.0633206036557361	-0.00496220104828574	0.2432545652822	0.059885766503308	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	OCD_2025_delta_rg	0.112434390144384	0.0551963577915862	0.00424952887287505	0.220619251415893	0.0416511144150161	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	AN_delta_rg	0.117983879443434	0.0530220610321991	0.0140606398203238	0.221907119066544	0.0260688409332639	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	AUD_delta_rg	0.194771711270673	0.0495343868690092	0.097684313007415	0.291859109533931	8.42243620830727e-05	NA	Per-auxiliary paired profile component; global profile tests reported above
+profile_component	EXMORE minus narrow FinnGen	CUD_2023_EUR_delta_rg	0.195430117879599	0.0494848537957344	0.0984398044399596	0.292420431319238	7.83828157470218e-05	NA	Per-auxiliary paired profile component; global profile tests reported above
+category_DID	EXMORE minus PGC	mood_psychotic_delta_pp	1.62359903843399	5.42747681595481	-9.01425552083743	12.2614535977054	0.764829906292552	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus PGC	internalizing_delta_pp	0.0306443007822165	1.36526766843951	-2.64528032935923	2.70656893092366	0.982092477447684	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus PGC	neurodevelopmental_delta_pp	-0.345613800393281	1.98416207439863	-4.23457146621459	3.54334386542803	0.86171907174862	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus PGC	compulsive_eating_delta_pp	0.623113158127777	1.91384476974951	-3.12802259058125	4.37424890683681	0.744740731414943	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus PGC	substance_delta_pp	-1.73631644633724	1.95879137308181	-5.57554753757758	2.10291464490311	0.375389981543465	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus narrow FinnGen	mood_psychotic_delta_pp	10.2558505151575	4.95307840358497	0.547816844130929	19.963884186184	0.0383960718383776	0.383960718383776	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus narrow FinnGen	internalizing_delta_pp	0.368169443363412	1.37079407754174	-2.3185869486184	3.05492583534523	0.788252023171239	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus narrow FinnGen	neurodevelopmental_delta_pp	-0.1999302000459	2.21868771334691	-4.54855811820585	4.14869771811405	0.92819828043679	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus narrow FinnGen	compulsive_eating_delta_pp	1.33995147534725	2.11533404404794	-2.80610325098672	5.48600620168122	0.526441944158526	0.982092477447684	BH family contains 10 EXMORE category comparisons
+category_DID	EXMORE minus narrow FinnGen	substance_delta_pp	1.22902499635692	1.45418428695704	-1.62117620607888	4.07922619879273	0.398018976778002	0.982092477447684	BH family contains 10 EXMORE category comparisons
+quality_control	SCZ_FINNGEN_R13_EXMORE	matrix_condition_number	62.000022644906	NA	NA	NA	NA	NA	PASS; analysis maximum=1000
+quality_control	SCZ_FINNGEN_R13_EXMORE	max_target_aux_rg_squared	0.484087461923547	NA	NA	NA	NA	NA	PASS; analysis maximum is strictly below 0.5

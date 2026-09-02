@@ -1,0 +1,17 @@
+quantity	value
+supergnova_sum_local_rho	0.2030757530879014
+supergnova_valid_blocks	1698
+supergnova_overlap_snps	4487208
+supergnova_sum_m_valid_blocks	4477538
+supergnova_omitted_blocks	5
+supergnova_omitted_overlap_snps_derived	9670
+supergnova_omitted_overlap_fraction_derived	0.002155014877848319
+gnova_p0	4487208
+gnova_p	4487208
+gnova_rho	0.209244210084
+gnova_rho_corrected	0.184731397218
+gnova_se_rho	0.0183234425924
+gnova_h2_1	0.411325953653
+gnova_h2_2	0.186122541391
+local_to_gnova_rho_ratio	0.9705202978203207
+local_to_gnova_rho_corrected_ratio	1.0993028588868052

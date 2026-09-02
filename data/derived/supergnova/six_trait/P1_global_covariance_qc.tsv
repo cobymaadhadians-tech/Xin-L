@@ -1,0 +1,2 @@
+P1_sum_local_rho	global_h2_PGC	global_h2_FinnGen	global_rg	global_covariance	local_to_global_ratio	global_covariance_source	global_h2_source	global_rg_source
+0.20307575308790143	0.495847416414103	0.223270628282196	0.9554	0.3178886789437255	0.6388266287515418	frozen integrated LDSC h2 and rg values	figure_source_data/integrated_phbc/integrated_target_phbc.tsv	figure_source_data/integrated_phbc/integrated_cross_definition_rg.tsv

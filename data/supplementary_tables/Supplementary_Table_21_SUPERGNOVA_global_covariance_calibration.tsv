@@ -1,0 +1,12 @@
+metric	value	note
+SUPERGNOVA_sum_local_rho	0.2030757530879014	P1 PGC SCZ x narrow FinnGen SCZ; 1698 valid blocks
+SUPERGNOVA_valid_blocks	1698	P1 local output
+SUPERGNOVA_overlap_snps	4487208	P1 matched input universe
+SUPERGNOVA_sum_m_valid_blocks	4477538	Sum of m across valid blocks
+SUPERGNOVA_omitted_blocks	5	1703 published EUR LDetect blocks minus 1698 valid outputs
+SUPERGNOVA_omitted_overlap_snps_derived	9670	4487208 minus 4477538
+SUPERGNOVA_omitted_overlap_fraction_derived	0.002155014877848319	Derived from overlap SNP counts
+GNOVA_global_covariance_raw	0.209244210084	Matched P1 input universe; s.e. 0.0183234425924
+GNOVA_global_covariance_overlap_corrected	0.184731397218	Matched P1 input universe
+local_to_GNOVA_raw_ratio	0.9705202978203207	Estimator-level calibration ratio
+local_to_GNOVA_corrected_ratio	1.0993028588868052	Sensitivity ratio; correction implementations differ
