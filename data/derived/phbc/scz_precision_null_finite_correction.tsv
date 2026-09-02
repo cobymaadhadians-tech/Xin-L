@@ -1,0 +1,3 @@
+analysis	extreme_count	n_simulations	raw_tail_fraction	finite_simulation_p
+SCZ_precision_null_PGC	2	10000	0.0002	0.0002999700029997
+SCZ_precision_null_precision_weighted	10	10000	0.001	0.0010998900109989

@@ -1,0 +1,7 @@
+# Python packages used by upstream input preparation and SUPERGNOVA helpers.
+bitarray==2.8.3
+numpy==1.23.5
+pandas==1.2.5
+pyliftover
+scikit-learn==1.2.2
+scipy==1.9.3

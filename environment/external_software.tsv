@@ -1,0 +1,5 @@
+software	version_or_commit	role	source
+LDSC	version recorded in the server workflow	univariate h2 and pairwise rg	https://github.com/bulik/ldsc
+SUPERGNOVA	319e84e114a4f954005a4592756c56cfee083667	local genetic covariance	https://github.com/qlu-lab/SUPERGNOVA
+R	4.5.0	R analysis scripts	R Project
+Python	3.9.23	SUPERGNOVA runtime	Python

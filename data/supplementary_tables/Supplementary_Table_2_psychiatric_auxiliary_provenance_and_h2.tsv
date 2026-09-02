@@ -1,0 +1,12 @@
+trait	h2	se	z_h2	source_identifier	source_status
+BD_PGC2021	0.2788	0.0114	24.46	PGC bipolar disorder 2021 summary statistics	IDENTIFIED
+SCZ_PGC2022	0.3876	0.0136	28.5	PGC schizophrenia wave 3 European summary statistics	IDENTIFIED
+PTSD	0.0543	0.0023	23.61	PGC PTSD Freeze 3 European case-control; Figshare article 26349322, file 52065146; doi:10.6084/m9.figshare.26349322.v3	IDENTIFIED
+ANX	0.0776	0.0028	27.71	PGC anxiety meta-analysis excluding UTAH; Figshare article 31389910, file 62089324; doi:10.6084/m9.figshare.31389910.v1	IDENTIFIED
+ADHD	0.164	0.0073	22.47	PGC ADHD 2023 European release; Figshare file 40036684	IDENTIFIED
+ASD	0.2035	0.0178	11.43	Grove et al. 2019 ASD European summary statistics	IDENTIFIED
+AN	0.2494	0.0166	15.02	Watson et al. 2019 anorexia nervosa European summary statistics	IDENTIFIED
+AUD	0.085	0.0035	24.2857142857143	Nature Medicine 2023 European AUD meta-analysis; AUD_EUR_Aug2023.txt.gz	IDENTIFIED
+OCD_2025	0.3164	0.0203	15.5862068965517	2025 OCD GWAS, non-23andMe leave-UKB-out file	IDENTIFIED
+CUD_2023_EUR	0.0874	0.0045	19.4222222222222	2023 European CUD meta-analysis	IDENTIFIED
+MDD_CLIN_PGC2025	0.095	0.0096	9.9	PGC MDD2025 clinical/interview European summary statistics	IDENTIFIED

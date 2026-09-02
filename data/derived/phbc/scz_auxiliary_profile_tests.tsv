@@ -1,0 +1,2 @@
+n_block	n_aux	mean_delta	mean_delta_se	mean_delta_z	mean_delta_p_two_sided	omnibus_chi2	omnibus_df	omnibus_p_chisq	paired_cov_min_eigenvalue	paired_cov_max_eigenvalue	paired_cov_condition_number
+200	10	0.160541858821243	0.0298385229021541	5.38035543340025	7.43389168238632e-08	39.9263696127654	10	1.74581445080529e-05	0.00107022280668248	0.00950102462005411	8.87761367140529

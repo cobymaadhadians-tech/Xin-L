@@ -1,0 +1,5 @@
+package	version	used_by
+pleioh2g	0.1.3	PHBC and block-jackknife analyses
+data.table	1.17.8	TSV input/output and matrix handling
+GenomicSEM	0.0.5	SCZ model-swap sensitivity
+mvtnorm	version not captured in server record	Monte Carlo and covariance sensitivity analyses

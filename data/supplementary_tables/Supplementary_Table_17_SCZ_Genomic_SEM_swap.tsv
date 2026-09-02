@@ -1,0 +1,33 @@
+analysis_stage	target_source	result_class	quantity	indicator_or_relation	estimate	standard_error	p_value	criterion_or_note
+PGC_reference_gate	SCZ_PGC2022	matrix_diagnostic	S_positive_definite	global	TRUE			required TRUE
+PGC_reference_gate	SCZ_PGC2022	matrix_diagnostic	S_minimum_eigenvalue	global	0.00703535382			diagnostic
+PGC_reference_gate	SCZ_PGC2022	matrix_diagnostic	S_condition_number	global	142.5490302			diagnostic
+PGC_reference_gate	SCZ_PGC2022	matrix_diagnostic	V_positive_definite	global	TRUE			required TRUE
+PGC_reference_gate	SCZ_PGC2022	matrix_diagnostic	V_minimum_eigenvalue	global	5.07092114e-07			diagnostic
+PGC_reference_gate	SCZ_PGC2022	matrix_diagnostic	V_condition_number	global	4666.445401			diagnostic
+PGC_reference_gate	SCZ_PGC2022	fit	chi_square	global	220.6370341		1.25946124e-29	df=33; descriptive only
+PGC_reference_gate	SCZ_PGC2022	fit	CFI	global	0.9791840971			threshold >=0.95; pass
+PGC_reference_gate	SCZ_PGC2022	fit	SRMR	global	0.0510678378			threshold <=0.08; pass
+PGC_reference_gate	SCZ_PGC2022	uninterpreted_parameter	standardized_SCZ_loading	F_PSY=~SCZ	0.7818018926	0.0262141231	1.92697312e-195	not interpreted because Gate 1 failed
+PGC_reference_gate	SCZ_PGC2022	uninterpreted_parameter	standardized_SCZ_residual_variance	SCZ~~SCZ	0.3887858007	0.0354831886	6.15622175e-28	not interpreted because Gate 1 failed
+PGC_reference_gate	SCZ_PGC2022	diagnostic	minimum_standardized_indicator_residual	OCD~~OCD	-0.2675910937	0.1401059518	0.0561400747	fails non-negative residual criterion; Heywood case
+PGC_reference_gate	SCZ_PGC2022	diagnostic	maximum_absolute_standardized_loading	F_COMP=~OCD	1.1258734803	0.0640541020	3.70177741e-69	fails absolute loading <=1 criterion
+PGC_reference_gate	SCZ_PGC2022	diagnostic	reversed_published_loading_direction	F_INT=~ALCH	-0.0143878039	0.0948361387	0.8794183332	fails published-direction criterion
+PGC_reference_gate	SCZ_PGC2022	diagnostic	maximum_absolute_factor_correlation	F_ND~~F_INT	0.6452373741	0.0407662841	2.00324150e-56	within absolute bound <1
+PGC_reference_gate	SCZ_PGC2022	gate_decision	proper_solution	global	FALSE			negative OCD residual and standardized OCD loading >1
+PGC_reference_gate	SCZ_PGC2022	gate_decision	gate_pass	global	FALSE			stop before any SCZ substitution
+downstream_substitution	SCZ_FINNGEN_R13	not_run	model_fit	global				not run because PGC reference gate failed
+downstream_substitution	SCZ_FINNGEN_R13	not_run	paired_200_block_difference	SCZ_loading_and_residual_variance				not run because PGC reference gate failed
+operational_definition_sensitivity	SCZ_FINNGEN_BROAD_R13	not_run	model_fit	global				eligible only after successful PGC and narrow FinnGen analyses
+predefined_five_factor_attempt	SCZ_PGC2022	fit	chi_square	global	381.349023186075			32 degrees of freedom; fit gate threshold CFI >= 0.95 and SRMR <= 0.08
+predefined_five_factor_attempt	SCZ_PGC2022	fit	CFI	global	0.965115801119121			fit threshold >= 0.95; pass
+predefined_five_factor_attempt	SCZ_PGC2022	fit	SRMR	global	0.0491059822629928			fit threshold <= 0.08; pass
+predefined_five_factor_attempt	SCZ_PGC2022	diagnostic	minimum_standardized_residual_variance	indicator	-0.230160079309325			fails non-negative residual criterion
+predefined_five_factor_attempt	SCZ_PGC2022	diagnostic	maximum_absolute_factor_correlation	factor_pair	0.624694494495619			within absolute bound <1
+predefined_five_factor_attempt	SCZ_PGC2022	gate_decision	proper_solution	global	FALSE			inadmissible five-factor solution; retain_for_main_text=FALSE
+predefined_five_factor_attempt	SCZ_FINNGEN_R13	fit	chi_square	global	295.60607380117			32 degrees of freedom; fit gate threshold CFI >= 0.95 and SRMR <= 0.08
+predefined_five_factor_attempt	SCZ_FINNGEN_R13	fit	CFI	global	0.967594105308771			fit threshold >= 0.95; pass
+predefined_five_factor_attempt	SCZ_FINNGEN_R13	fit	SRMR	global	0.0526304865463629			fit threshold <= 0.08; pass
+predefined_five_factor_attempt	SCZ_FINNGEN_R13	diagnostic	minimum_standardized_residual_variance	indicator	-0.271308292968845			fails non-negative residual criterion
+predefined_five_factor_attempt	SCZ_FINNGEN_R13	diagnostic	maximum_absolute_factor_correlation	factor_pair	0.627615561365988			within absolute bound <1
+predefined_five_factor_attempt	SCZ_FINNGEN_R13	gate_decision	proper_solution	global	FALSE			inadmissible five-factor solution; retain_for_main_text=FALSE

@@ -1,0 +1,30 @@
+stage	relative_path	role	upstream_source_or_input	used_by
+source_registry	data/supplementary_tables/Supplementary_Table_1_target_GWAS_provenance.tsv	Public target GWAS URLs, accessions, phenotype definitions, ancestry and sample information	Public consortium, FinnGen, GWAS Catalog and related source records	Manuscript Table 1; supplementary provenance
+source_registry	data/supplementary_tables/Supplementary_Table_2_psychiatric_auxiliary_provenance_and_h2.tsv	Psychiatric auxiliary source records and heritability estimates	Public auxiliary GWAS source records	PHBC eligibility and panel construction
+derived_results	data/derived/phbc/integrated_target_phbc.tsv	Integrated target PHBC estimates	Harmonized GWAS inputs, fixed auxiliary panels and PHBC analysis	Figure 2; Supplementary Figure 1; manuscript Tables 1–2
+derived_results	data/derived/phbc/integrated_cross_definition_rg.tsv	Cross-definition genetic-correlation estimates	Harmonized GWAS inputs and LD score regression	Figure 1; Figure 3a; Supplementary Figure 1
+derived_results	data/derived/phbc/integrated_paired_delta_phbc.tsv	Paired PHBC contrasts with uncertainty and FDR fields	Integrated PHBC estimates and matched block jackknife outputs	Figures 1–3; Supplementary Figure 1
+derived_results	data/derived/phbc/leave_category_out_paired_did.tsv	Category-removal difference-in-differences	Fixed-panel PHBC estimates and paired block jackknife outputs	Supplementary Figure 3
+derived_results	data/derived/phbc/leave_one_auxiliary_out_paired_phbc.tsv	Leave-one-auxiliary-out sensitivity	Fixed-panel PHBC estimates and paired block jackknife outputs	Supplementary Figure 2
+derived_results	data/derived/phbc/scz_auxiliary_profile_paired.tsv	SCZ target-to-auxiliary profile differences	SCZ target-to-auxiliary estimates and paired block jackknife outputs	Supplementary results and diagnostic traceability
+derived_results	data/derived/phbc/scz_precision_matched_null.tsv	SCZ precision-matched null summaries	SCZ precision-null simulations	Supplementary Table 11
+derived_results	data/derived/phbc/scz_precision_null_finite_correction.tsv	Finite-simulation tail correction results	SCZ precision-null simulations	Supplementary Table 11
+derived_results	data/derived/phbc/broad_scz_figure1.tsv	Broad-SCZ sensitivity values used in Figure 1	Broad FinnGen SCZ sensitivity analysis	Figure 1
+derived_results	data/derived/supergnova/	SCZ pairwise local-covariance outputs and profile summaries	SUPERGNOVA/GNOVA-derived local and global covariance outputs	Figure 3; Supplementary Table 21
+derived_results	data/derived/supergnova/six_trait/	Six-trait local-profile and technical QC outputs	SUPERGNOVA-derived local covariance outputs	Figure 3; supplementary diagnostics
+derived_results	data/supplementary_tables/	Supplementary result tables 1–21	Derived analysis outputs and source audits	Supplementary Information and referee access
+code	scripts/render_manuscript_figures.py	Render Figures 1–3 and Supplementary Figures 1–3	Derived TSV files listed above	Generated TIFF outputs
+code	scripts/render_figure3_diagnostics.py	Render SCZ local-covariance diagnostic figure	SUPERGNOVA and integrated derived TSV files	Figure 3
+code	scripts/validate_inputs.py	Check required files and columns before rendering	Repository data files	Reproduction check
+environment	environment/requirements.txt	Python package requirements for rendering	Python 3.14 runtime tested in the project workspace	Figure renderers
+environment	environment/python_environment.txt	Recorded Python and package versions	Project workspace runtime on 2026-09-02	Reproduction context
+code	scripts/upstream/core/	GWAS audit, source harmonization and LDSC-input preparation	Public GWAS files and HM3 reference	Upstream input preparation
+code	scripts/run_ldsc_h2.sh	Portable univariate LDSC command wrapper	External LDSC installation and LD-score reference	Target and auxiliary h2
+code	scripts/run_ldsc_rg.sh	Portable pairwise LDSC genetic-correlation command wrapper	External LDSC installation and LD-score reference	Cross-definition and target-auxiliary rg
+code	scripts/upstream/ascertainment_pilot/	PHBC, block-jackknife, leave-one-out, neurological and SCZ sensitivity analyses	LDSC-compatible inputs, LD reference and R packages	Primary and supplementary analysis outputs
+code	scripts/upstream/p26_broad_scz/	Broad FinnGen SCZ definition sensitivity analysis	LDSC-compatible inputs, LD reference and R packages	Figure 1 broad-SCZ sensitivity
+code	scripts/upstream/supergnova/	SUPERGNOVA input preparation and portable launcher	External SUPERGNOVA installation and reference panel	Figure 3 and Supplementary Table 21
+environment	environment/R_packages.tsv	R package versions used by upstream analyses	Server R environment record	PHBC and sensitivity analyses
+environment	environment/requirements_upstream.txt	Python packages used by upstream preparation helpers	Server SUPERGNOVA environment record	Input preparation and local covariance
+environment	environment/external_software.tsv	External software sources and version pins	Server deployment records	LDSC, SUPERGNOVA and R analysis
+input_data	data/input/README.md	Placement instructions for excluded public GWAS and reference inputs	Public source provenance tables	Upstream reproduction setup
