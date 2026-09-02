@@ -2,6 +2,7 @@ outputs/*.tif
 outputs/main/*.tif
 outputs/supplementary/*.tif
 data/input/
+!data/input/
 !data/input/README.md
 reference/
 results/
