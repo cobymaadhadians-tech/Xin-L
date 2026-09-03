@@ -1,6 +1,6 @@
 # Analysis repository
 
-This directory contains the derived result tables, figure source data, figure-rendering code and upstream analysis source for the Molecular Psychiatry submission.
+This directory contains the derived result tables, figure source data, figure-rendering code and upstream analysis source for the Translational Psychiatry submission.
 
 ## Scope
 
