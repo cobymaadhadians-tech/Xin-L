@@ -14,7 +14,7 @@ precision_null_proposals	30000 per null centre	Current Supplementary Table 11 su
 precision_null_retained_pgc	29169 (97.23%)	Current Supplementary Table 11 summary.
 precision_null_retained_precision_weighted	29386 (97.95%)	Current Supplementary Table 11 summary.
 precision_null_eigen_audit	unavailable	Current 10-auxiliary precision-null RDS inputs are not present in the project archive; no eigenvalue or floored-count values were inferred.
-main_manuscript_docx_sha256	9c0367d679e403acc1e66063487256867e81689cecfdf674bc1e724610915dced	Final canonical upload DOCX after LDSC audit update.
-supplementary_information_docx_sha256	8d15587da467e4d43f503a0fa5b6f1df6d2fb333ff924a2e9ecc6375e692d6b8	Final canonical upload DOCX after LDSC audit update.
+main_manuscript_docx_sha256	1aba5202303509d007daf20d9d3d0596ec37efeac370bbcfe99c8cb8da5d84a6	Final canonical upload DOCX after LDSC audit update.
+supplementary_information_docx_sha256	21674b11775fb71ed304059567e07aaac5087b36b21d802331257496da9d5bc5	Final canonical upload DOCX after LDSC audit update.
 cover_letter_docx_sha256	fc171a4e6bfcac799d7dbac79cb42c04c80702273ebd81d695495794185d0711	Final canonical upload DOCX after focused pre-submission revision.
 archive_zip_sha256	78f1147e2f951f0dbfa8661a0f07ec5c4ecc85a5abd0d1f3b6d9b948d0b11b2d	Canonical Archive.zip after synchronizing the LDSC audit update, recovering AUD logs, and removing system files.
