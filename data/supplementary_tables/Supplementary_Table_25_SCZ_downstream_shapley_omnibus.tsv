@@ -1,0 +1,13 @@
+model	comparison	test	statistic	df	P	covariance_rank	condition_number	omitted_component	BH_q_within_model_test
+primary_six	narrow_minus_PGC	raw_phi_full_rank	14.3292096316952	6	0.0261672820291659	6	89.9879330261692	NA	0.0392509230437488
+primary_six	narrow_minus_PGC	normalized_share_rank_constrained	5.71972206663114	5	0.334453317310661	5	NA	AUD	0.334453317310661
+primary_six	broad_minus_PGC	raw_phi_full_rank	5.30427171632907	6	0.50542128737938	6	714.614771484622	NA	0.50542128737938
+primary_six	broad_minus_PGC	normalized_share_rank_constrained	6.3339972617644	5	0.275062383206997	5	NA	AUD	0.334453317310661
+primary_six	broad_minus_narrow	raw_phi_full_rank	20.768773902899	6	0.00201857744848225	6	30.2708872728019	NA	0.00605573234544675
+primary_six	broad_minus_narrow	normalized_share_rank_constrained	7.0026990127483	5	0.220439656320324	5	NA	AUD	0.334453317310661
+sensitivity_all_ten	narrow_minus_PGC	raw_phi_full_rank	26.2388022510494	10	0.00343194359005935	10	136.490625633776	NA	0.00514791538508902
+sensitivity_all_ten	narrow_minus_PGC	normalized_share_rank_constrained	18.1197300097452	9	0.0338095964926572	9	NA	CUD_2023_EUR	0.101428789477972
+sensitivity_all_ten	broad_minus_PGC	raw_phi_full_rank	12.1944155617328	10	0.272255733395016	10	328.795697325081	NA	0.272255733395016
+sensitivity_all_ten	broad_minus_PGC	normalized_share_rank_constrained	13.9685120664953	9	0.123449731750269	9	NA	CUD_2023_EUR	0.123449731750269
+sensitivity_all_ten	broad_minus_narrow	raw_phi_full_rank	28.6137972800675	10	0.00143854908186848	10	77.3291791686791	NA	0.00431564724560543
+sensitivity_all_ten	broad_minus_narrow	normalized_share_rank_constrained	14.0370128760947	9	0.121014686394497	9	NA	CUD_2023_EUR	0.123449731750269

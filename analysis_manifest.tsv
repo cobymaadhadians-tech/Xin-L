@@ -12,7 +12,7 @@ derived_results	data/derived/phbc/scz_precision_null_finite_correction.tsv	Finit
 derived_results	data/derived/phbc/broad_scz_figure1.tsv	Broad-SCZ sensitivity values used in Figure 1	Broad FinnGen SCZ sensitivity analysis	Figure 1
 derived_results	data/derived/supergnova/	SCZ pairwise local-covariance outputs and profile summaries	SUPERGNOVA/GNOVA-derived local and global covariance outputs	Figure 3; Supplementary Table 21
 derived_results	data/derived/supergnova/six_trait/	Six-trait local-profile and technical QC outputs	SUPERGNOVA-derived local covariance outputs	Figure 3; supplementary diagnostics
-derived_results	data/supplementary_tables/	Supplementary result tables 1–22	Derived analysis outputs and source audits	Supplementary Information and referee access
+derived_results	data/supplementary_tables/	Supplementary result tables 1–26	Derived analysis outputs and source audits	Supplementary Information and referee access
 audit	data/supplementary_tables/Supplementary_Table_22_LDSC_diagnostic_and_overlap_audit.tsv	LDSC intercept, overlap and archive-status audit	Archived LDSC logs, source provenance and recorded command mode	Supplementary Table 22; manuscript Methods
 audit	data/input/input_manifest.tsv	Excluded input-data manifest	Public GWAS files and reference inputs listed for reproduction	Input provenance and reproducibility record
 audit	data/reference/reference_manifest.tsv	Excluded reference-resource manifest	LD scores, HapMap3 and LDetect resources listed for reproduction	Reference provenance and reproducibility record
@@ -24,6 +24,7 @@ code	scripts/render_figure3_diagnostics.py	Render SCZ local-covariance diagnosti
 code	scripts/validate_inputs.py	Check required files and columns before rendering	Repository data files	Reproduction check
 code	scripts/build_ldsc_audit_table.py	Build LDSC diagnostic and overlap audit	Provenance, pairwise results and recoverable run logs	Supplementary Table 22
 code	scripts/upstream/ascertainment_pilot/p11_corrected_scz_10aux_diagnostics.R	Record covariance eigenvalue-floor audit during precision-null rerun	SCZ block profiles and precision-null inputs	Diagnostic output requires the current 10-auxiliary SCZ block caches and final PHBC record
+code	scripts/upstream/ascertainment_pilot/p32_observed_shapley_r2_decomposition.R	Observed covariance-based joint genetic R2 and exact Shapley decomposition for SCZ representations	PGC, narrow FinnGen and broad FinnGen observed genetic-correlation matrices with 200 matched block caches	Supplementary Tables 23–26; full rerun requires the external analysis inputs
 environment	environment/requirements.txt	Python package requirements for rendering	Python 3.14 runtime tested in the project workspace	Figure renderers
 environment	environment/python_environment.txt	Recorded Python and package versions	Project workspace runtime on 2026-09-02	Reproduction context
 code	scripts/upstream/core/	GWAS audit, source harmonization and LDSC-input preparation	Public GWAS files and HM3 reference	Upstream input preparation

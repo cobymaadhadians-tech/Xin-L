@@ -117,7 +117,6 @@ def draw_summary(ax: plt.Axes, rg_value: float, delta_value: float) -> None:
             fontsize=6.2,
             color="#444444",
         )
-    ax.text(0.02, 0.08, "Pairwise genome-wide similarity does not determine the fixed-panel multivariate contrast.", transform=ax.transAxes, ha="left", va="bottom", fontsize=5.9, color="#444444", wrap=True)
 
 
 def draw_local_genome(ax: plt.Axes, p1: pd.DataFrame) -> None:
@@ -136,9 +135,6 @@ def draw_local_genome(ax: plt.Axes, p1: pd.DataFrame) -> None:
     ax.set_xticks(np.arange(22) + 0.5, [str(i) for i in range(1, 23)], fontsize=5.4)
     ax.set_xlabel("Chromosome")
     ax.set_ylabel(r"Local covariance, $\rho$ ($\times 10^{-3}$)")
-    positive_significant = int((sig.rho >= 0).sum())
-    significance_text = f"{positive_significant} positive" if positive_significant != len(sig) else "all positive"
-    ax.text(0.99, 0.97, f"K = {len(p1):,}; {len(sig)} Bonferroni-positive blocks\n{significance_text}", transform=ax.transAxes, ha="right", va="top", fontsize=5.9, color="#333333")
     clean(ax)
     ax.grid(axis="x", visible=False)
 
@@ -152,15 +148,11 @@ def draw_profile_similarity(ax: plt.Axes, prof: pd.DataFrame, panel: pd.DataFram
     ax.scatter(d.pearson_r, y, s=32, color=TEAL, edgecolor="#1B5E5A", linewidth=0.5, zorder=3)
     panel_r = float(panel.panel_standardized_profile_pearson_r.iloc[0])
     ax.axvline(panel_r, color=INDIGO, lw=1.0, ls=(0, (4, 3)), zorder=2)
-    common_blocks = int(panel.common_blocks_all_six.iloc[0])
-    trait_count = int(panel.traits.iloc[0])
-    ax.text(0.99, 1.03, f"panel-wide r = {panel_r:.3f}\n{common_blocks:,} common blocks × {trait_count} traits", transform=ax.transAxes, color="#333333", ha="right", va="bottom", fontsize=5.8)
     ax.set_yticks(y, order)
     ax.invert_yaxis()
     ax.set_xlim(0, 0.42)
     ax.set_xticks([0, 0.1, 0.2, 0.3, 0.4])
     ax.set_xlabel("Pearson correlation of local covariance profiles")
-    ax.text(0.01, -0.23, "Auxiliary-specific values are descriptive; the panel-wide value uses standardized local ρ vectors.", transform=ax.transAxes, ha="left", va="top", fontsize=5.6, color="#444444")
     clean(ax)
     ax.grid(axis="x", visible=False)
 
@@ -179,19 +171,6 @@ def draw_adhd_scatter(ax: plt.Axes, adhd: pd.DataFrame, profile: pd.DataFrame) -
     ax.set_ylim(-lim, lim)
     ax.set_xlabel(r"PGC SCZ × ADHD local $\rho$ ($\times 10^{-3}$)")
     ax.set_ylabel(r"FinnGen SCZ × ADHD local $\rho$ ($\times 10^{-3}$)")
-    summary = profile.iloc[0]
-    ax.text(
-        0.03,
-        0.97,
-        f"Pearson r = {summary.pearson_r:.3f}\n"
-        f"Informative sign concordance = {100 * summary.informative_sign_concordance:.1f}%\n"
-        f"Top-5% overlap = {int(summary.top5pct_intersection_n)}/{int(summary.top5pct_n_each)}",
-        transform=ax.transAxes,
-        ha="left",
-        va="top",
-        fontsize=5.8,
-        color="#333333",
-    )
     ax.legend(handles=[Line2D([0], [0], marker="o", color="none", markerfacecolor=TEAL, markeredgewidth=0, markersize=4.5, label="same sign"), Line2D([0], [0], marker="o", color="none", markerfacecolor=CORAL, markeredgewidth=0, markersize=4.5, label="opposite sign"), Line2D([0], [0], color="#555555", lw=1.0, ls=(0, (4, 3)), label="$y=x$")], loc="lower right", fontsize=5.7, handlelength=1.4, borderaxespad=0.3)
     clean(ax)
     ax.grid(False)

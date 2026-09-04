@@ -28,8 +28,9 @@ The command writes uncompressed 600-d.p.i. TIFF files to `outputs/main/` and `ou
 4. `scripts/upstream/ascertainment_pilot/` computes PHBC, block-jackknife, leave-one-out, neurological and SCZ sensitivity results.
 5. `scripts/upstream/p26_broad_scz/` computes the broad FinnGen SCZ representation sensitivity analysis.
 6. `scripts/upstream/ascertainment_pilot/prepare_supergnova_inputs.py` prepares local-covariance inputs. `scripts/upstream/supergnova/run_supergnova.sh` launches an external SUPERGNOVA installation pinned in `environment/external_software.tsv`.
-7. The resulting tables under `data/derived/` and `data/supplementary_tables/` are the referee-accessible outputs, including the six-trait SUPERGNOVA summary in Supplementary Table 21 and the LDSC diagnostic and overlap audit in Supplementary Table 22.
-8. `scripts/render_manuscript_figures.py` combines the committed derived tables into Figures 1–3 and Supplementary Figures 1–3. The SCZ local-covariance renderer is kept in `scripts/render_figure3_diagnostics.py` and is called by the main renderer.
+7. The resulting tables under `data/derived/` and `data/supplementary_tables/` are the referee-accessible outputs, including the six-trait SUPERGNOVA summary in Supplementary Table 21, the LDSC diagnostic and overlap audit in Supplementary Table 22 and the SCZ downstream joint genetic R2 and Shapley outputs in Supplementary Tables 23–26.
+8. `scripts/upstream/ascertainment_pilot/p32_observed_shapley_r2_decomposition.R` computes the observed covariance-based joint genetic R2, exact Shapley contributions, paired delete-one-block uncertainty and the profile-level sensitivity tests. The full matrices and block caches are external analysis inputs. To rerun against an analysis root containing the recorded `results/p11_scz_neff_audit/`, `results/p25/` and `results/p26_broad_scz/` directories, use `ANALYSIS_ROOT=/path/to/phenotype_ascertainment_pilot Rscript scripts/upstream/ascertainment_pilot/p32_observed_shapley_r2_decomposition.R`; set `RESULTS_DIR` to redirect the output archive.
+9. `scripts/render_manuscript_figures.py` combines the committed derived tables into Figures 1–3 and Supplementary Figures 1–3. The SCZ local-covariance renderer is kept in `scripts/render_figure3_diagnostics.py` and is called by the main renderer.
 
 ## Upstream environment
 
