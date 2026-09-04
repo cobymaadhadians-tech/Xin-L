@@ -1,0 +1,70 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/ldsc_audit/logs/MDD_FINNGEN_R13__BD_PGC2021 \
+--print-snps /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/w_hm3.snplist \
+--rg /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/standardized/ldsc/MDD_FINNGEN_R13.sumstats.gz,/Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/standardized/ldsc/BD_PGC2021.sumstats.gz \
+--ref-ld-chr /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/ \
+--w-ld-chr /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC. \
+--print-cov  
+
+Beginning analysis at Fri Sep  4 09:26:41 2026
+Reading summary statistics from /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/standardized/ldsc/MDD_FINNGEN_R13.sumstats.gz ...
+Read summary statistics for 1159088 SNPs.
+Reading reference panel LD Score from /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1159088 SNPs remain.
+After merging with regression SNP LD, 1147139 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/standardized/ldsc/BD_PGC2021.sumstats.gz ...
+Read summary statistics for 1121823 SNPs.
+After merging with summary statistics, 1092314 SNPs remain.
+1092301 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0948 (0.0054)
+Lambda GC: 1.4722
+Mean Chi^2: 1.5424
+Intercept: 1.126 (0.0122)
+Ratio: 0.2323 (0.0225)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.2803 (0.0122)
+Lambda GC: 1.4726
+Mean Chi^2: 1.6165
+Intercept: 1.0367 (0.0114)
+Ratio: 0.0595 (0.0185)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0856 (0.0051)
+Mean z1*z2: 0.2709
+Intercept: 0.0152 (0.0075)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.5251 (0.0253)
+Z-score: 20.7448
+P: 1.367e-95
+
+Printing covariance matrix of the estimates to /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/ldsc_audit/logs/MDD_FINNGEN_R13__BD_PGC2021MDD_FINNGEN_R13.sumstats.gz_BD_PGC2021.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/ldsc_audit/logs/MDD_FINNGEN_R13__BD_PGC2021MDD_FINNGEN_R13.sumstats.gz_BD_PGC2021.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/ldsc_audit/logs/MDD_FINNGEN_R13__BD_PGC2021MDD_FINNGEN_R13.sumstats.gz_BD_PGC2021.sumstats.gz.gencov.cov.
+
+Summary of Genetic Correlation Results
+                                                                                                                              p1                                                                                                                         p2     rg     se       z          p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+/Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/ldsc_recompute_20260904/standardized/ldsc/MDD_FINNGEN_R13.sumstats.gz /Users/fandiesmas/Desktop/Molecular_Psychiatry/.codex_work/public_inputs_20260903/standardized/ldsc/BD_PGC2021.sumstats.gz 0.5251 0.0253 20.7448 1.3670e-95  0.2803     0.0122  1.0367     0.0114    0.0152       0.0075
+
+Analysis finished at Fri Sep  4 09:26:46 2026
+Total time elapsed: 4.93s
