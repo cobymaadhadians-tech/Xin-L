@@ -1,0 +1,70 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/MDD_QUEST_PGC2025__AUD \
+--print-snps /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/w_hm3.snplist \
+--rg /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p1/ldsc_input/MDD_QUEST_PGC2025.sumstats.gz,/public/home/zhengxiaoyang/BPD_transdiagnostic_genetics/analysis/ldsc/munged/AUD.sumstats.gz \
+--ref-ld-chr /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/eur_w_ld_chr/ \
+--w-ld-chr /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/weights_hm3_noMHC/weights.hm3_noMHC. \
+--print-cov  
+
+Beginning analysis at Mon Aug 31 00:18:51 2026
+Reading summary statistics from /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p1/ldsc_input/MDD_QUEST_PGC2025.sumstats.gz ...
+Read summary statistics for 1172357 SNPs.
+Reading reference panel LD Score from /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/weights_hm3_noMHC/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1159697 SNPs remain.
+After merging with regression SNP LD, 1159697 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /public/home/zhengxiaoyang/BPD_transdiagnostic_genetics/analysis/ldsc/munged/AUD.sumstats.gz ...
+Read summary statistics for 1176971 SNPs.
+After merging with summary statistics, 1146333 SNPs remain.
+1146333 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0697 (0.0038)
+Lambda GC: 1.2722
+Mean Chi^2: 1.323
+Intercept: 1.0186 (0.009)
+Ratio: 0.0574 (0.0277)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0864 (0.0037)
+Lambda GC: 1.334
+Mean Chi^2: 1.4476
+Intercept: 1.0466 (0.0069)
+Ratio: 0.1041 (0.0153)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0288 (0.0022)
+Mean z1*z2: 0.1292
+Intercept: 0.0008 (0.005)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.3707 (0.0248)
+Z-score: 14.975
+P: 1.0705e-50
+
+Printing covariance matrix of the estimates to /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/MDD_QUEST_PGC2025__AUDMDD_QUEST_PGC2025.sumstats.gz_AUD.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/MDD_QUEST_PGC2025__AUDMDD_QUEST_PGC2025.sumstats.gz_AUD.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/MDD_QUEST_PGC2025__AUDMDD_QUEST_PGC2025.sumstats.gz_AUD.sumstats.gz.gencov.cov.
+
+Summary of Genetic Correlation Results
+                                                                                                          p1                                                                                           p2     rg     se      z          p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+/public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p1/ldsc_input/MDD_QUEST_PGC2025.sumstats.gz /public/home/zhengxiaoyang/BPD_transdiagnostic_genetics/analysis/ldsc/munged/AUD.sumstats.gz 0.3707 0.0248 14.975 1.0705e-50  0.0864     0.0037  1.0466     0.0069    0.0008        0.005
+
+Analysis finished at Mon Aug 31 00:19:02 2026
+Total time elapsed: 11.16s

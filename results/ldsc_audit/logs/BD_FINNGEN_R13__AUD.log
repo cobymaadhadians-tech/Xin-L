@@ -1,0 +1,70 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/BD_FINNGEN_R13__AUD \
+--print-snps /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/w_hm3.snplist \
+--rg /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p1/ldsc_input/BD_FINNGEN_R13.sumstats.gz,/public/home/zhengxiaoyang/BPD_transdiagnostic_genetics/analysis/ldsc/munged/AUD.sumstats.gz \
+--ref-ld-chr /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/eur_w_ld_chr/ \
+--w-ld-chr /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/weights_hm3_noMHC/weights.hm3_noMHC. \
+--print-cov  
+
+Beginning analysis at Mon Aug 31 00:19:14 2026
+Reading summary statistics from /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p1/ldsc_input/BD_FINNGEN_R13.sumstats.gz ...
+Read summary statistics for 1151098 SNPs.
+Reading reference panel LD Score from /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /public/home/zhengxiaoyang/PTSD_JPEP/resources/ldsc_ref/weights_hm3_noMHC/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1147172 SNPs remain.
+After merging with regression SNP LD, 1147172 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /public/home/zhengxiaoyang/BPD_transdiagnostic_genetics/analysis/ldsc/munged/AUD.sumstats.gz ...
+Read summary statistics for 1176971 SNPs.
+After merging with summary statistics, 1134637 SNPs remain.
+1134621 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.1497 (0.016)
+Lambda GC: 1.1571
+Mean Chi^2: 1.1655
+Intercept: 1.058 (0.0086)
+Ratio: 0.3502 (0.0521)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0869 (0.0037)
+Lambda GC: 1.3374
+Mean Chi^2: 1.4496
+Intercept: 1.0462 (0.0069)
+Ratio: 0.1028 (0.0153)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0503 (0.0044)
+Mean z1*z2: 0.1571
+Intercept: 0.061 (0.0048)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.441 (0.0406)
+Z-score: 10.8654
+P: 1.6844e-27
+
+Printing covariance matrix of the estimates to /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/BD_FINNGEN_R13__AUDBD_FINNGEN_R13.sumstats.gz_AUD.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/BD_FINNGEN_R13__AUDBD_FINNGEN_R13.sumstats.gz_AUD.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to /public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p25/target_aux_rg/BD_FINNGEN_R13__AUDBD_FINNGEN_R13.sumstats.gz_AUD.sumstats.gz.gencov.cov.
+
+Summary of Genetic Correlation Results
+                                                                                                       p1                                                                                           p2    rg     se       z          p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+/public/home/zhengxiaoyang/phenotype_ascertainment_pilot/results/p1/ldsc_input/BD_FINNGEN_R13.sumstats.gz /public/home/zhengxiaoyang/BPD_transdiagnostic_genetics/analysis/ldsc/munged/AUD.sumstats.gz 0.441 0.0406 10.8654 1.6844e-27  0.0869     0.0037  1.0462     0.0069     0.061       0.0048
+
+Analysis finished at Mon Aug 31 00:19:24 2026
+Total time elapsed: 10.0s
