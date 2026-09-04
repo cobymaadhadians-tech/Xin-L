@@ -17,4 +17,4 @@ precision_null_eigen_audit	unavailable	Current 10-auxiliary precision-null RDS i
 main_manuscript_docx_sha256	1aba5202303509d007daf20d9d3d0596ec37efeac370bbcfe99c8cb8da5d84a6	Final canonical upload DOCX after LDSC audit update.
 supplementary_information_docx_sha256	21674b11775fb71ed304059567e07aaac5087b36b21d802331257496da9d5bc5	Final canonical upload DOCX after LDSC audit update.
 cover_letter_docx_sha256	fc171a4e6bfcac799d7dbac79cb42c04c80702273ebd81d695495794185d0711	Final canonical upload DOCX after focused pre-submission revision.
-archive_zip_sha256	78f1147e2f951f0dbfa8661a0f07ec5c4ecc85a5abd0d1f3b6d9b948d0b11b2d	Canonical Archive.zip after synchronizing the LDSC audit update, recovering AUD logs, and removing system files.
+archive_zip_sha256	902974d09fdeac8b2385e5f4285f24d17707bc1b6268b32bf94b177afac610c8	Canonical Archive.zip after synchronizing the LDSC audit update, recovering AUD logs, and removing system files.
