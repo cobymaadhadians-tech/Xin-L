@@ -6,14 +6,14 @@ remote_tag_status	not_created	No local Git repository was present, so a remote t
 ldsc_version	1.0.1; Git 2fdeeb3b44379408794154993dbd6101b8946b7e	Recovered from archived and rerun LDSC logs; source commit is pinned.
 ldsc_rerun_runtime	Python 3.14.3; converted LDSC copy	Local rerun used a Python 3 compatibility copy of the pinned LDSC 1.0.1 source; the upstream statistical command and reference inputs were unchanged.
 ldsc_reference_archive_md5	76c1890c8cf22d99d05c6707cc8441b4	Zenodo 14993076 eur_w_ld_chr.tgz; individual LD and weight checksums are in data/reference/ldsc_reference_checksums.tsv.
-ldsc_intercept_logs	84 of 107 comparison records	Archived LDSC pairwise logs now contain three intercept records for 84 listed comparisons; 23 remain NA because the final input or corresponding log is unavailable in the current archive.
+ldsc_intercept_logs	96 of 107 comparison records	Archived LDSC pairwise logs now contain three intercept records for 96 listed comparisons; 11 remain NA: nine AUD target–auxiliary records lack the complete signed AUD input, and two ILAE–EHR meta-analysis records lack a reconstructable historical derived input.
 gnova_source_snapshot	5e0c460662cd257bb7887e9430f8a46c0ee6321f	Public xtonyjiang/GNOVA source snapshot; the original server-run commit was not retained and is not inferred from this snapshot.
 mvtnorm_version	1.3-3	Recovered from archived sessionInfo.txt.
 precision_null_proposals	30000 per null centre	Current Supplementary Table 11 summary.
 precision_null_retained_pgc	29169 (97.23%)	Current Supplementary Table 11 summary.
 precision_null_retained_precision_weighted	29386 (97.95%)	Current Supplementary Table 11 summary.
 precision_null_eigen_audit	unavailable	Current 10-auxiliary precision-null RDS inputs are not present in the project archive; no eigenvalue or floored-count values were inferred.
-main_manuscript_docx_sha256	7c94a299910fc0b2fb57d6c26ffbf3020c9b60ee84eff81291458cc94f9492ba	Final canonical upload DOCX after focused pre-submission revision.
-supplementary_information_docx_sha256	6aee79d500b50bb18a6b49df20e29921af70c69ea24a06ac54765d2f69e91e8b	Final canonical upload DOCX after focused pre-submission revision.
+main_manuscript_docx_sha256	1e02ab31cd8868afd09c5253e92a1dd8be3ae585d0c6d99663a157a2628ee0ba	Final canonical upload DOCX after LDSC audit update.
+supplementary_information_docx_sha256	6042cbd271e8c2aef231d251375703da7c4cdd5ce92276ca7fc80054fa957644	Final canonical upload DOCX after LDSC audit update.
 cover_letter_docx_sha256	fc171a4e6bfcac799d7dbac79cb42c04c80702273ebd81d695495794185d0711	Final canonical upload DOCX after focused pre-submission revision.
-archive_zip_sha256	b264fb273613fcfc5a1cb1388527c67d723ea6f5a06c345686fe2c50072c5f6b	Canonical Archive.zip after synchronizing the focused revision and removing system files.
+archive_zip_sha256	9ebb25db4cb4f340fd951a75ff3e951bdea1e25cd91cb7bc4c88fd0578fd1a16	Canonical Archive.zip after synchronizing the LDSC audit update and removing system files.
