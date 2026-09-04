@@ -82,10 +82,22 @@ fwrite(data.table(
 ), file.path(out_dir, "scz_10aux_rg_profile_tests.tsv"), sep = "\t")
 
 # Precision-matched null using the current 10-auxiliary panel and P2.5 PHBC.
-safe_cov <- function(x) {
+covariance_floor_audit <- function(x, label, floor = 1e-10) {
+  s <- cov(x) * nrow(x)
+  values <- eigen(s, symmetric = TRUE, only.values = TRUE)$values
+  data.table(
+    covariance = label,
+    dimension = length(values),
+    min_eigenvalue_before_floor = min(values),
+    max_eigenvalue_before_floor = max(values),
+    n_eigenvalues_floored = sum(values < floor),
+    eigenvalue_floor = floor
+  )
+}
+safe_cov <- function(x, floor = 1e-10) {
   s <- cov(x) * nrow(x)
   e <- eigen(s, symmetric = TRUE)
-  e$values[e$values < 1e-10] <- 1e-10
+  e$values[e$values < floor] <- floor
   e$vectors %*% (e$values * t(e$vectors))
 }
 rmvnorm_base <- function(n, mean, sigma) {
@@ -99,6 +111,10 @@ Rdd_fg <- profiles[["SCZ_FINNGEN_R13"]]$full_rg[aux, aux, drop = FALSE]
 if (max(abs(Rdd_pgc - Rdd_fg)) > 1e-10) stop("auxiliary matrices differ between SCZ targets")
 sigma_fg <- safe_cov(jk_fg)
 sigma_pgc <- safe_cov(jk_pgc)
+fwrite(rbind(
+  covariance_floor_audit(jk_fg, "precision_weighted_SCZ_FinnGen"),
+  covariance_floor_audit(jk_pgc, "PGC_SCZ")
+), file.path(out_dir, "scz_precision_null_eigenvalue_audit.tsv"), sep = "\t")
 precision_center <- solve(solve(sigma_pgc) + solve(sigma_fg),
                           solve(sigma_pgc, r_pgc) + solve(sigma_fg, r_fg))
 records <- readRDS(file.path(root, "results/p25/final/p25_phbc_records.rds"))$full

@@ -1,0 +1,8 @@
+record_type	auxiliary	common_valid_blocks	pearson_r	spearman_rho	informative_blocks	sign_concordance	top5_overlap_count	top5_overlap_total	top5_overlap_fraction	random_expected	top5_enrichment	panel_blocks	panel_values	panel_pearson_r
+auxiliary_profile	ADHD	1698	0.301	0.260	158	0.722	18	85	0.212	4.3	4.23	NA	NA	NA
+auxiliary_profile	ASD	1665	0.320	0.254	147	0.762	19	84	0.226	4.2	4.48	NA	NA	NA
+auxiliary_profile	OCD	1667	0.272	0.245	146	0.760	24	84	0.286	4.2	5.67	NA	NA	NA
+auxiliary_profile	AN	1645	0.332	0.284	154	0.779	19	83	0.229	4.2	4.54	NA	NA	NA
+auxiliary_profile	AUD	1670	0.274	0.243	157	0.739	18	84	0.214	4.2	4.26	NA	NA	NA
+auxiliary_profile	CUD	1673	0.205	0.214	137	0.701	14	84	0.167	4.2	3.32	NA	NA	NA
+panel_summary	ALL_SIX	1642	NA	NA	NA	NA	NA	NA	NA	NA	NA	1642	9852	0.283

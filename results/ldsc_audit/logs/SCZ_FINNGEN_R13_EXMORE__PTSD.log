@@ -1,0 +1,70 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out .codex_work/public_inputs_20260903/ldsc_audit/logs/SCZ_FINNGEN_R13_EXMORE__PTSD \
+--print-snps .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/w_hm3.snplist \
+--rg .codex_work/public_inputs_20260903/standardized/ldsc/SCZ_FINNGEN_R13_EXMORE.sumstats.gz,.codex_work/public_inputs_20260903/standardized/ldsc/PTSD.sumstats.gz \
+--ref-ld-chr .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/ \
+--w-ld-chr .codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC. \
+--print-cov  
+
+Beginning analysis at Thu Sep  3 22:24:00 2026
+Reading summary statistics from .codex_work/public_inputs_20260903/standardized/ldsc/SCZ_FINNGEN_R13_EXMORE.sumstats.gz ...
+Read summary statistics for 1159132 SNPs.
+Reading reference panel LD Score from .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from .codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1159132 SNPs remain.
+After merging with regression SNP LD, 1147181 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from .codex_work/public_inputs_20260903/standardized/ldsc/PTSD.sumstats.gz ...
+Read summary statistics for 1075748 SNPs.
+After merging with summary statistics, 1058468 SNPs remain.
+1058466 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.1251 (0.0126)
+Lambda GC: 1.1872
+Mean Chi^2: 1.2156
+Intercept: 1.0629 (0.0089)
+Ratio: 0.2915 (0.0414)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0548 (0.0024)
+Lambda GC: 1.4341
+Mean Chi^2: 1.5266
+Intercept: 1.036 (0.0099)
+Ratio: 0.0684 (0.0188)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0366 (0.0037)
+Mean z1*z2: 0.1587
+Intercept: 0.039 (0.0067)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.4426 (0.0376)
+Z-score: 11.7783
+P: 5.0473e-32
+
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/SCZ_FINNGEN_R13_EXMORE__PTSDSCZ_FINNGEN_R13_EXMORE.sumstats.gz_PTSD.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/SCZ_FINNGEN_R13_EXMORE__PTSDSCZ_FINNGEN_R13_EXMORE.sumstats.gz_PTSD.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/SCZ_FINNGEN_R13_EXMORE__PTSDSCZ_FINNGEN_R13_EXMORE.sumstats.gz_PTSD.sumstats.gz.gencov.cov.
+
+Summary of Genetic Correlation Results
+                                                                                     p1                                                                    p2     rg     se       z          p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+.codex_work/public_inputs_20260903/standardized/ldsc/SCZ_FINNGEN_R13_EXMORE.sumstats.gz .codex_work/public_inputs_20260903/standardized/ldsc/PTSD.sumstats.gz 0.4426 0.0376 11.7783 5.0473e-32  0.0548     0.0024   1.036     0.0099     0.039       0.0067
+
+Analysis finished at Thu Sep  3 22:24:10 2026
+Total time elapsed: 9.59s

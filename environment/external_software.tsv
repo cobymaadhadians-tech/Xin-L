@@ -1,5 +1,9 @@
 software	version_or_commit	role	source
-LDSC	version recorded in the server workflow	univariate h2 and pairwise rg	https://github.com/bulik/ldsc
+LDSC	1.0.1; Git 2fdeeb3b44379408794154993dbd6101b8946b7e	univariate h2 and pairwise rg; intercepts freely estimated in recorded commands	https://github.com/bulik/ldsc/tree/2fdeeb3b44379408794154993dbd6101b8946b7e
+LDSC local runtime	Python 3.14.3; converted copy via 2to3-3.11	local compatibility runtime for the archived LDSC 1.0.1 source; no analysis-level parameter changes	https://github.com/bulik/ldsc/tree/2fdeeb3b44379408794154993dbd6101b8946b7e
 SUPERGNOVA	319e84e114a4f954005a4592756c56cfee083667	local genetic covariance	https://github.com/qlu-lab/SUPERGNOVA
-R	4.5.0	R analysis scripts	R Project
+GNOVA	public source snapshot 5e0c460662cd257bb7887e9430f8a46c0ee6321f; executable has no embedded version	global covariance calibration; exact command recorded in environment/analysis_commands.tsv; server-run commit remains unavailable	https://github.com/xtonyjiang/GNOVA/tree/5e0c460662cd257bb7887e9430f8a46c0ee6321f
+pleioh2g	0.1.3	PHBC and block-jackknife calculations	https://cran.r-project.org/package=pleioh2g
+GenomicSEM	0.0.5	prespecified multivariate validation	https://github.com/GenomicSEM/GenomicSEM
+R	4.5.0	server-side R analysis scripts	R Project
 Python	3.9.23	SUPERGNOVA runtime	Python

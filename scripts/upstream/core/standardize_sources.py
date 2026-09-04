@@ -18,6 +18,8 @@ from typing import Dict, Iterable, Optional, Sequence
 
 
 CONFIG = {
+    "ADHD": dict(snp=("SNP",), chrom=("CHR",), bp=("BP",), a1=("A1",), a2=("A2",), odds_ratio=("OR",), se=("SE",), p=("P",), n_fixed=128213.79504642317, info=("INFO",), build="GRCh37"),
+    "ANX": dict(snp=("SNP",), chrom=("CHR",), bp=("BP",), a1=("A1",), a2=("A2",), odds_ratio=("OR",), se=("SE",), p=("P",), n=("Neff_half",), n_factor=2.0, info=("INFO",), build="GRCh37"),
     "MDD_CLIN_PGC2025": dict(snp=("ID",), chrom=("CHROM",), bp=("POS",), a1=("EA",), a2=("NEA",), beta=("BETA",), se=("SE",), p=("PVAL",), n=("NEFF",), info=("IMPINFO",), build="GRCh37"),
     "MDD_EHR_PGC2025": dict(snp=("ID",), chrom=("CHROM",), bp=("POS",), a1=("EA",), a2=("NEA",), beta=("BETA",), se=("SE",), p=("PVAL",), n=("NEFF",), info=("IMPINFO",), build="GRCh37"),
     "MDD_QUEST_PGC2025": dict(snp=("ID",), chrom=("CHROM",), bp=("POS",), a1=("EA",), a2=("NEA",), beta=("BETA",), se=("SE",), p=("PVAL",), n=("NEFF",), info=("IMPINFO",), build="GRCh37"),
@@ -27,6 +29,7 @@ CONFIG = {
     "BD_FINNGEN_R13": dict(snp=("RSIDS",), chrom=("CHROM",), bp=("POS",), a1=("ALT",), a2=("REF",), beta=("BETA",), se=("SEBETA",), p=("PVAL",), n_fixed=36114.340, eaf=("AF_ALT",), build="GRCh38"),
     "SCZ_PGC2022": dict(snp=("ID",), chrom=("CHROM",), bp=("POS",), a1=("A1",), a2=("A2",), beta=("BETA",), se=("SE",), p=("PVAL",), n=("NEFF",), info=("IMPINFO",), build="GRCh37"),
     "SCZ_FINNGEN_R13": dict(snp=("RSIDS",), chrom=("CHROM",), bp=("POS",), a1=("ALT",), a2=("REF",), beta=("BETA",), se=("SEBETA",), p=("PVAL",), n_fixed=28812.977, eaf=("AF_ALT",), build="GRCh38"),
+    "PTSD": dict(snp=("ID",), chrom=("CHROM",), bp=("POS",), a1=("A1",), a2=("A2",), beta=("BETA",), se=("SE",), p=("P",), n=("NEFF",), build="GRCh37"),
     "AD_GCST90704646_MAIN": dict(snp=("rs_id", "variant_id"), chrom=("chromosome",), bp=("base_pair_location",), a1=("effect_allele",), a2=("other_allele",), beta=("beta",), se=("standard_error",), p=("p_value",), n=("Neff_total",), eaf=("effect_allele_frequency",), build="GRCh38"),
     "AD_GCST90704647_NOPROXY": dict(snp=("rs_id", "variant_id"), chrom=("chromosome",), bp=("base_pair_location",), a1=("effect_allele",), a2=("other_allele",), beta=("beta",), se=("standard_error",), p=("p_value",), n=("Neff_total",), eaf=("effect_allele_frequency",), build="GRCh38"),
     "AD_GCST90704648_NOBIOBANK": dict(snp=("rs_id", "variant_id"), chrom=("chromosome",), bp=("base_pair_location",), a1=("effect_allele",), a2=("other_allele",), beta=("beta",), se=("standard_error",), p=("p_value",), n=("Neff_total",), eaf=("effect_allele_frequency",), build="GRCh38"),

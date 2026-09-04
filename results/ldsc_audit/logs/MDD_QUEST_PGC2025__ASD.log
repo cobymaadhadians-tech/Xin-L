@@ -1,0 +1,70 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out .codex_work/public_inputs_20260903/ldsc_audit/logs/MDD_QUEST_PGC2025__ASD \
+--print-snps .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/w_hm3.snplist \
+--rg .codex_work/public_inputs_20260903/standardized/ldsc/MDD_QUEST_PGC2025.sumstats.gz,.codex_work/public_inputs_20260903/standardized/ldsc/ASD.sumstats.gz \
+--ref-ld-chr .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/ \
+--w-ld-chr .codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC. \
+--print-cov  
+
+Beginning analysis at Thu Sep  3 22:17:33 2026
+Reading summary statistics from .codex_work/public_inputs_20260903/standardized/ldsc/MDD_QUEST_PGC2025.sumstats.gz ...
+Read summary statistics for 1169742 SNPs.
+Reading reference panel LD Score from .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from .codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1169742 SNPs remain.
+After merging with regression SNP LD, 1159708 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from .codex_work/public_inputs_20260903/standardized/ldsc/ASD.sumstats.gz ...
+Read summary statistics for 1050308 SNPs.
+After merging with summary statistics, 1036186 SNPs remain.
+1036186 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0684 (0.004)
+Lambda GC: 1.2935
+Mean Chi^2: 1.3459
+Intercept: 1.026 (0.0106)
+Ratio: 0.0752 (0.0307)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.2043 (0.0177)
+Lambda GC: 1.1715
+Mean Chi^2: 1.1997
+Intercept: 1.0066 (0.0098)
+Ratio: 0.0329 (0.049)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0391 (0.0055)
+Mean z1*z2: 0.0849
+Intercept: 0.0032 (0.0071)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.3308 (0.0456)
+Z-score: 7.2568
+P: 3.9641e-13
+
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/MDD_QUEST_PGC2025__ASDMDD_QUEST_PGC2025.sumstats.gz_ASD.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/MDD_QUEST_PGC2025__ASDMDD_QUEST_PGC2025.sumstats.gz_ASD.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/MDD_QUEST_PGC2025__ASDMDD_QUEST_PGC2025.sumstats.gz_ASD.sumstats.gz.gencov.cov.
+
+Summary of Genetic Correlation Results
+                                                                                p1                                                                   p2     rg     se      z          p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+.codex_work/public_inputs_20260903/standardized/ldsc/MDD_QUEST_PGC2025.sumstats.gz .codex_work/public_inputs_20260903/standardized/ldsc/ASD.sumstats.gz 0.3308 0.0456 7.2568 3.9641e-13  0.2043     0.0177  1.0066     0.0098    0.0032       0.0071
+
+Analysis finished at Thu Sep  3 22:17:48 2026
+Total time elapsed: 14.68s

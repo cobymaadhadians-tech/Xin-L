@@ -1,0 +1,70 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out .codex_work/public_inputs_20260903/ldsc_audit/logs/AD_GCST90704647_NOPROXY__AD_GCST90704648_NOBIOBANK \
+--print-snps .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/w_hm3.snplist \
+--rg .codex_work/public_inputs_20260903/standardized/ldsc/AD_GCST90704647_NOPROXY.sumstats.gz,.codex_work/public_inputs_20260903/standardized/ldsc/AD_GCST90704648_NOBIOBANK.sumstats.gz \
+--ref-ld-chr .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/ \
+--w-ld-chr .codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC. \
+--print-cov  
+
+Beginning analysis at Thu Sep  3 22:19:40 2026
+Reading summary statistics from .codex_work/public_inputs_20260903/standardized/ldsc/AD_GCST90704647_NOPROXY.sumstats.gz ...
+Read summary statistics for 1178091 SNPs.
+Reading reference panel LD Score from .codex_work/public_inputs_20260903/reference/extracted/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from .codex_work/public_inputs_20260903/reference/weights/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1178091 SNPs remain.
+After merging with regression SNP LD, 1166540 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from .codex_work/public_inputs_20260903/standardized/ldsc/AD_GCST90704648_NOBIOBANK.sumstats.gz ...
+Read summary statistics for 1167970 SNPs.
+After merging with summary statistics, 1156202 SNPs remain.
+1156202 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0508 (0.0196)
+Lambda GC: 1.2284
+Mean Chi^2: 1.3859
+Intercept: 1.1753 (0.0961)
+Ratio: 0.4542 (0.249)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0662 (0.0216)
+Lambda GC: 1.2016
+Mean Chi^2: 1.3022
+Intercept: 1.135 (0.0639)
+Ratio: 0.4466 (0.2114)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0572 (0.0203)
+Mean z1*z2: 1.1497
+Intercept: 0.9633 (0.0768)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.9869 (0.0102)
+Z-score: 96.6154
+P: 0.
+
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/AD_GCST90704647_NOPROXY__AD_GCST90704648_NOBIOBANKAD_GCST90704647_NOPROXY.sumstats.gz_AD_GCST90704648_NOBIOBANK.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/AD_GCST90704647_NOPROXY__AD_GCST90704648_NOBIOBANKAD_GCST90704647_NOPROXY.sumstats.gz_AD_GCST90704648_NOBIOBANK.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to .codex_work/public_inputs_20260903/ldsc_audit/logs/AD_GCST90704647_NOPROXY__AD_GCST90704648_NOBIOBANKAD_GCST90704647_NOPROXY.sumstats.gz_AD_GCST90704648_NOBIOBANK.sumstats.gz.gencov.cov.
+
+Summary of Genetic Correlation Results
+                                                                                      p1                                                                                         p2     rg     se       z   p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+.codex_work/public_inputs_20260903/standardized/ldsc/AD_GCST90704647_NOPROXY.sumstats.gz .codex_work/public_inputs_20260903/standardized/ldsc/AD_GCST90704648_NOBIOBANK.sumstats.gz 0.9869 0.0102 96.6154 0.0  0.0662     0.0216   1.135     0.0639    0.9633       0.0768
+
+Analysis finished at Thu Sep  3 22:19:49 2026
+Total time elapsed: 9.35s
