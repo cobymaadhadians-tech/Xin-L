@@ -1,7 +1,7 @@
 field	value	source_or_note
 snapshot_label	v1.0-tp-submission	Local label recorded for this submission package.
 snapshot_date	2026-09-04	Asia/Shanghai date at execution.
-public_repository_commit	70943a493c2a55779a146c1699d3c8eb178187d7	https://github.com/cobymaadhadians-tech/Xin-L; current workspace has no .git metadata.
+public_repository_commit	4517308f40317f0cbd56bb12e735582767c580ad	https://github.com/cobymaadhadians-tech/Xin-L; synchronized to the current submission package from the workspace public-repository source.
 remote_tag_status	not_created	No local Git repository was present, so a remote tag could not be created in this workspace.
 ldsc_version	1.0.1; Git 2fdeeb3b44379408794154993dbd6101b8946b7e	Recovered from archived and rerun LDSC logs; source commit is pinned.
 ldsc_rerun_runtime	Python 3.14.3; converted LDSC copy	Local rerun used a Python 3 compatibility copy of the pinned LDSC 1.0.1 source; the upstream statistical command and reference inputs were unchanged.
