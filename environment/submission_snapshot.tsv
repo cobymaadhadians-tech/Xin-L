@@ -1,7 +1,7 @@
 field	value	source_or_note
 snapshot_label	v1.0-tp-submission	Local label recorded for this submission package.
 snapshot_date	2026-09-04	Asia/Shanghai date at execution.
-public_repository_commit	f0e10e2ef2f10494f04f48ece71bce2bbccd174d	https://github.com/cobymaadhadians-tech/Xin-L; source-repository head before this synchronization commit.
+public_repository_commit	87b2576	https://github.com/cobymaadhadians-tech/Xin-L; synchronization commit containing recovered AUD LDSC logs and updated Supplementary Table 22.
 remote_tag_status	not_created	No local Git repository was present, so a remote tag could not be created in this workspace.
 ldsc_version	1.0.1; Git 2fdeeb3b44379408794154993dbd6101b8946b7e	Recovered from archived and rerun LDSC logs; source commit is pinned.
 ldsc_rerun_runtime	server Python 3.12.3; local Python 3.14.3 compatibility copy	AUD logs were rerun on the server with the pinned LDSC 1.0.1 source; the local PGC-SCZ audit rerun used a Python 3 compatibility copy with the same reference inputs.
