@@ -1,8 +1,8 @@
 field	value	source_or_note
 snapshot_label	v1.2-mp-major-revision	Local label recorded for the Molecular Psychiatry submission package after the targeted Genomic SEM membership check, annotation QC update and upload-package cleanup.
 snapshot_date	2026-09-05	Asia/Shanghai date at execution.
-public_repository_commit	87b2576 (pre-revision public state)	https://github.com/cobymaadhadians-tech/Xin-L; the local revision is recorded below and has not been pushed from this workspace.
-public_repository_sync_status	local_revision_pending_remote_push	The local analysis repository and submission package include the targeted Genomic SEM check and updated annotation QC; the workspace has no Git metadata or configured GitHub authentication.
+public_repository_commit	f7539c8	https://github.com/cobymaadhadians-tech/Xin-L; major-revision analysis outputs and manifest changes pushed to the main branch.
+public_repository_sync_status	synced	The local analysis repository and submission package include the targeted Genomic SEM check and updated annotation QC; the analysis repository revision was pushed to GitHub.
 remote_tag_status	not_created	No local Git repository was present, so a remote tag could not be created in this workspace.
 ldsc_version	1.0.1; Git 2fdeeb3b44379408794154993dbd6101b8946b7e	Recovered from archived and rerun LDSC logs; source commit is pinned.
 ldsc_rerun_runtime	server Python 3.12.3; local Python 3.14.3 compatibility copy	AUD logs were rerun on the server with the pinned LDSC 1.0.1 source; the local PGC-SCZ audit rerun used a Python 3 compatibility copy with the same reference inputs.
