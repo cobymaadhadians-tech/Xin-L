@@ -1,7 +1,8 @@
 field	value	source_or_note
-snapshot_label	v1.0-tp-submission	Local label recorded for this submission package.
-snapshot_date	2026-09-04	Asia/Shanghai date at execution.
-public_repository_commit	87b2576	https://github.com/cobymaadhadians-tech/Xin-L; synchronization commit containing recovered AUD LDSC logs and updated Supplementary Table 22.
+snapshot_label	v1.2-mp-major-revision	Local label recorded for the Molecular Psychiatry submission package after the targeted Genomic SEM membership check, annotation QC update and upload-package cleanup.
+snapshot_date	2026-09-05	Asia/Shanghai date at execution.
+public_repository_commit	87b2576 (pre-revision public state)	https://github.com/cobymaadhadians-tech/Xin-L; the local revision is recorded below and has not been pushed from this workspace.
+public_repository_sync_status	local_revision_pending_remote_push	The local analysis repository and submission package include the targeted Genomic SEM check and updated annotation QC; the workspace has no Git metadata or configured GitHub authentication.
 remote_tag_status	not_created	No local Git repository was present, so a remote tag could not be created in this workspace.
 ldsc_version	1.0.1; Git 2fdeeb3b44379408794154993dbd6101b8946b7e	Recovered from archived and rerun LDSC logs; source commit is pinned.
 ldsc_rerun_runtime	server Python 3.12.3; local Python 3.14.3 compatibility copy	AUD logs were rerun on the server with the pinned LDSC 1.0.1 source; the local PGC-SCZ audit rerun used a Python 3 compatibility copy with the same reference inputs.
@@ -16,7 +17,8 @@ precision_null_proposals	30000 per null centre	Current Supplementary Table 11 su
 precision_null_retained_pgc	29169 (97.23%)	Current Supplementary Table 11 summary.
 precision_null_retained_precision_weighted	29386 (97.95%)	Current Supplementary Table 11 summary.
 precision_null_eigen_audit	unavailable	Current 10-auxiliary precision-null RDS inputs are not present in the project archive; no eigenvalue or floored-count values were inferred.
-main_manuscript_docx_sha256	20d818aeb7642c4ec5d1f1875c354466f2afbce2e5e1ffb4c751cdde8b4e540d	Canonical upload DOCX after the downstream R2 and Shapley Methods, Results and Discussion update.
-supplementary_information_docx_sha256	bd59d665ecb0464e295948b923e65a32d8e25fbda0baf24fbad5f283af535720	Canonical upload DOCX after the downstream R2 and Shapley Methods, Results and Tables 23–26 index update; Markdown inline markup was removed, the table index order was verified and archive wording was aligned with the submitted summaries.
-cover_letter_docx_sha256	fc171a4e6bfcac799d7dbac79cb42c04c80702273ebd81d695495794185d0711	Final canonical upload DOCX after focused pre-submission revision.
-archive_zip_sha256	951472d7ece345f1556cda6bb72fe8c4e4f030342d3ab99a421766bb0df3b236	Canonical Archive.zip after adding the downstream R2 and Shapley DOCX and TSV updates; the pre-update archive is retained in the hidden task backup.
+targeted_gsem_membership_check	complete	Server result archived locally under results/d5i_targeted_alt_20260905; ANX removed from COMP, retained in INT, SUD unchanged; both OCD-boundary fits passed.
+main_manuscript_docx_sha256	cb62401b9e4037d35cddb75b9c0edd2d8c3247aafa6bd75945db16be61335d14	Canonical upload DOCX after the targeted Genomic SEM membership check, annotation warning/QC reporting, title calibration, complete supplementary-table cross-references and MP supplementary-information statement.
+supplementary_information_docx_sha256	4ed53cd849f4e67436b03e2b9022e4f499a748f516271e1ff651b929f76db665	Canonical upload DOCX after adding PHBC pruning/Monte Carlo transparency, the targeted Genomic SEM membership check and updated PI/brain-cell QC counts.
+cover_letter_docx_sha256	d61ce632c7a354aa7a050b80f0d4af8cf1685a2c4baa387fabb342e780a7dd24	Canonical Molecular Psychiatry cover-letter DOCX with the non-conclusion title, targeted model check and warning-aware annotation summary.
+archive_zip_sha256	7dfd4bdd489120525c53d572a873ef832bd3c0c9a06def4b6db4948ea9f21849	Canonical Archive.zip rebuilt with the updated DOCX files, Figures 1–4, Supplementary Figures 1–4, all 30 TSV tables and no .DS_Store or .codex_qa entries; removed package artifacts remain in the hidden task backup.

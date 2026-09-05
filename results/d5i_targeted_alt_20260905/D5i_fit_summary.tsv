@@ -1,0 +1,3 @@
+model_id	boundary_floor	returned_parameter_table	CFI	SRMR	negative_residuals	hard_admissibility	acceptable_fit	defined_covariance_rank	omnibus_W	omnibus_df	omnibus_P	gate_pass	error
+primary_boundary_0.0001	1e-04	TRUE	0.9780860513	0.0688446584		TRUE	TRUE	3	33.5903606	3	2.4176254e-07	TRUE	
+sensitivity_boundary_0.001	0.001	TRUE	0.9780711970	0.0688545165		TRUE	TRUE	3	33.5912464	3	2.4165850e-07	TRUE	

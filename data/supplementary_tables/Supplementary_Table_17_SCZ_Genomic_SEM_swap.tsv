@@ -1,3 +1,26 @@
-model	target_source	CFI	SRMR	min_standardized_residual_variance	residual_indicator	max_abs_standardized_loading	loading_indicator	proper_solution	decision	notes
-four_factor	SCZ_PGC2022	0.9792	0.0511	-0.2676	OCD	1.1259	F_COMP=~OCD	FALSE	STOP	OCD standardized residual variance < 0; standardized OCD loading > 1; F_INT=~ALCH loading = -0.0144
-hierarchical_fallback	SCZ_PGC2022	0.9764	0.0517	-0.2485	OCD	1.1174	F_COMP=~OCD	FALSE	STOP	ANX standardized residual variance = -0.0333; F_INT=~ANX loading = 1.0165
+row_type	metric	representation	estimate	SE	CI_lower	CI_upper	P	Holm_P	CFI	SRMR	W	df	omnibus_P	boundary_floor	notes
+fit	overall	joint_model_1e-4	NA	NA	NA	NA	NA	NA	0.978086	0.068845	33.5908	3	2.4171e-07	1e-4	All target-domain associations estimated in one joint Genomic SEM; OCD residual constrained above the stated lower bound.
+fit	overall	joint_model_1e-3	NA	NA	NA	NA	NA	NA	0.978071	0.068855	33.5912	3	2.4167e-07	1e-3	Full-sample lower-bound sensitivity.
+domain_association	COMP	SCZ_PGC	0.400608	0.024577	0.352437	0.448780	NA	NA	NA	NA	NA	NA	NA	1e-4	Standardized external association.
+domain_association	INT	SCZ_PGC	0.401521	0.021980	0.358441	0.444601	NA	NA	NA	NA	NA	NA	NA	1e-4	Standardized external association.
+domain_association	SUD	SCZ_PGC	0.388313	0.022545	0.344125	0.432500	NA	NA	NA	NA	NA	NA	NA	1e-4	Standardized external association.
+domain_association	COMP	SCZ_FINNGEN	0.269830	0.061677	0.148944	0.390716	NA	NA	NA	NA	NA	NA	NA	1e-4	Standardized external association.
+domain_association	INT	SCZ_FINNGEN	0.184963	0.044365	0.098007	0.271919	NA	NA	NA	NA	NA	NA	NA	1e-4	Standardized external association.
+domain_association	SUD	SCZ_FINNGEN	0.115690	0.053283	0.011255	0.220124	NA	NA	NA	NA	NA	NA	NA	1e-4	Standardized external association.
+contrast	d_COMP	SCZ_FINNGEN_minus_SCZ_PGC	-0.130778	0.063832	-0.255889	-0.005667	0.040484	0.040484	NA	NA	NA	NA	NA	1e-4	Primary component contrast; FinnGen minus PGC.
+contrast	d_INT	SCZ_FINNGEN_minus_SCZ_PGC	-0.216558	0.050812	-0.316149	-0.116966	2.0267e-05	4.0535e-05	NA	NA	NA	NA	NA	1e-4	Primary component contrast; FinnGen minus PGC.
+contrast	d_SUD	SCZ_FINNGEN_minus_SCZ_PGC	-0.272623	0.057079	-0.384498	-0.160748	1.7859e-06	5.3578e-06	NA	NA	NA	NA	NA	1e-4	Primary component contrast; FinnGen minus PGC.
+comparator	Delta_r_g_BIP	SCZ_FINNGEN_minus_SCZ_PGC	-0.151755	0.061431	-0.272159	-0.031351	0.013498	NA	NA	NA	NA	NA	NA	1e-4	Observed-trait comparator; not included in the three-domain omnibus test.
+comparator	Delta_r_g_ASD	SCZ_FINNGEN_minus_SCZ_PGC	-0.065059	0.089443	-0.240367	0.110250	0.466995	NA	NA	NA	NA	NA	NA	1e-4	Observed-trait comparator; not included in the three-domain omnibus test.
+boundary	OCD_residual_constraint	joint_model_1e-4	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1e-4	The active lower boundary was retained as a model-fitting qualification; increasing the bound to 1e-3 left the primary estimates and omnibus statistic unchanged.
+fit	overall	alternative_no_ANX_COMP_1e-4	NA	NA	NA	NA	NA	NA	0.9780861	0.0688447	33.5904	3	2.4176e-07	1e-4	Prespecified alternative specification: ANX removed from COMP, retained in INT, and SUD unchanged; no further membership search.
+fit	overall	alternative_no_ANX_COMP_1e-3	NA	NA	NA	NA	NA	NA	0.9780712	0.0688545	33.5912	3	2.4166e-07	1e-3	Boundary sensitivity for the prespecified alternative specification.
+domain_association	COMP	SCZ_PGC_alt	0.400609	0.024577	0.352437	0.448780	NA	NA	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification.
+domain_association	INT	SCZ_PGC_alt	0.401521	0.021980	0.358441	0.444601	NA	NA	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification.
+domain_association	SUD	SCZ_PGC_alt	0.388312	0.022545	0.344124	0.432500	NA	NA	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification.
+domain_association	COMP	SCZ_FINNGEN_alt	0.269830	0.061677	0.148944	0.390716	NA	NA	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification.
+domain_association	INT	SCZ_FINNGEN_alt	0.184964	0.044365	0.098008	0.271921	NA	NA	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification.
+domain_association	SUD	SCZ_FINNGEN_alt	0.115691	0.053283	0.011256	0.220126	NA	NA	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification.
+contrast	d_COMP	SCZ_FINNGEN_alt_minus_SCZ_PGC_alt	-0.130779	0.063832	-0.255890	-0.005667	0.040483	0.040483	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification; FinnGen minus PGC.
+contrast	d_INT	SCZ_FINNGEN_alt_minus_SCZ_PGC_alt	-0.216557	0.050812	-0.316149	-0.116965	2.0270e-05	4.0539e-05	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification; FinnGen minus PGC.
+contrast	d_SUD	SCZ_FINNGEN_alt_minus_SCZ_PGC_alt	-0.272621	0.057079	-0.384496	-0.160746	1.7863e-06	5.3589e-06	NA	NA	NA	NA	NA	1e-4	Targeted alternative specification; FinnGen minus PGC.
