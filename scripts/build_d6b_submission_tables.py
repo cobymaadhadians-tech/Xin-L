@@ -28,6 +28,16 @@ def _materialize_public_enrichment(source: Path, output: Path) -> None:
     for column in frame.columns:
         if pd.api.types.is_object_dtype(frame[column]) or pd.api.types.is_string_dtype(frame[column]):
             frame[column] = frame[column].map(_public_annotation_value)
+    tested = frame["target_parameter"].ne("BASELINE")
+    p_values = pd.to_numeric(frame["Enrichment_p_value"], errors="coerce")
+    warning = frame["Annotation_model_warning"].fillna(False).astype(bool)
+    error = frame["Annotation_model_error"].fillna(False).astype(bool)
+    frame["alpha_984"] = 0.05 / 984
+    frame["Bonferroni_significant_984"] = tested & p_values.lt(0.05 / 984)
+    frame["QC_warning_free"] = tested & ~warning & ~error
+    frame["Bonferroni_significant_984_warning_free"] = (
+        frame["Bonferroni_significant_984"] & frame["QC_warning_free"]
+    )
     frame.to_csv(output, sep="\t", index=False)
 
 
@@ -55,6 +65,9 @@ def main() -> None:
                 "n_tested_rows": kwargs.get("n_tested_rows", ""),
                 "n_finite_p": kwargs.get("n_finite_p", ""),
                 "n_significant_168": kwargs.get("n_significant_168", ""),
+                "n_significant_155": kwargs.get("n_significant_155", ""),
+                "n_significant_984": kwargs.get("n_significant_984", ""),
+                "n_significant_984_warning_free": kwargs.get("n_significant_984_warning_free", ""),
                 "n_warning_rows": kwargs.get("n_warning_rows", ""),
                 "n_error_rows": kwargs.get("n_error_rows", ""),
                 "notes": kwargs.get("notes", ""),
@@ -70,9 +83,18 @@ def main() -> None:
         n_tested_rows=len(tested),
         n_finite_p=int(tested["Enrichment_p_value"].notna().sum()),
         n_significant_168=int(tested["Bonferroni_significant_168"].eq(True).sum()),
+        n_significant_155=int(tested["Bonferroni_significant_155"].eq(True).sum()),
+        n_significant_984=int((pd.to_numeric(tested["Enrichment_p_value"], errors="coerce") < 0.05 / 984).sum()),
+        n_significant_984_warning_free=int(
+            (
+                (pd.to_numeric(tested["Enrichment_p_value"], errors="coerce") < 0.05 / 984)
+                & ~tested["Annotation_model_warning"].fillna(False).astype(bool)
+                & ~tested["Annotation_model_error"].fillna(False).astype(bool)
+            ).sum()
+        ),
         n_warning_rows=int(tested["Annotation_model_warning"].eq(True).sum()),
         n_error_rows=int(tested["Annotation_model_error"].eq(True).sum()),
-        notes="200 LDSC blocks; published 0.05/168 and covariance-protocol 0.05/155 thresholds gave identical calls; baseline continuous/flanking annotations were retained for conditioning and excluded from enrichment output.",
+        notes="200 LDSC blocks; the primary extended family is 164 analyzable annotations × 6 covariance parameters = 984 tests (alpha = 0.05/984). The published 0.05/168 and covariance-protocol 0.05/155 thresholds are retained as protocol sensitivities; baseline continuous/flanking annotations were retained for conditioning and excluded from enrichment output.",
     )
 
     class_inputs = {"baseline": 97, "expression": 24, "chromatin": 60, "custom": 29}
@@ -85,6 +107,15 @@ def main() -> None:
             n_tested_rows=len(group),
             n_finite_p=int(group["Enrichment_p_value"].notna().sum()),
             n_significant_168=int(group["Bonferroni_significant_168"].eq(True).sum()),
+            n_significant_155=int(group["Bonferroni_significant_155"].eq(True).sum()),
+            n_significant_984=int((pd.to_numeric(group["Enrichment_p_value"], errors="coerce") < 0.05 / 984).sum()),
+            n_significant_984_warning_free=int(
+                (
+                    (pd.to_numeric(group["Enrichment_p_value"], errors="coerce") < 0.05 / 984)
+                    & ~group["Annotation_model_warning"].fillna(False).astype(bool)
+                    & ~group["Annotation_model_error"].fillna(False).astype(bool)
+                ).sum()
+            ),
             n_warning_rows=int(group["Annotation_model_warning"].eq(True).sum()),
             n_error_rows=int(group["Annotation_model_error"].eq(True).sum()),
             notes="Annotation family summary after official enrich() exclusions.",
@@ -97,6 +128,15 @@ def main() -> None:
             n_tested_rows=len(group),
             n_finite_p=int(group["Enrichment_p_value"].notna().sum()),
             n_significant_168=int(group["Bonferroni_significant_168"].eq(True).sum()),
+            n_significant_155=int(group["Bonferroni_significant_155"].eq(True).sum()),
+            n_significant_984=int((pd.to_numeric(group["Enrichment_p_value"], errors="coerce") < 0.05 / 984).sum()),
+            n_significant_984_warning_free=int(
+                (
+                    (pd.to_numeric(group["Enrichment_p_value"], errors="coerce") < 0.05 / 984)
+                    & ~group["Annotation_model_warning"].fillna(False).astype(bool)
+                    & ~group["Annotation_model_error"].fillna(False).astype(bool)
+                ).sum()
+            ),
             n_warning_rows=int(group["Annotation_model_warning"].eq(True).sum()),
             n_error_rows=int(group["Annotation_model_error"].eq(True).sum()),
             source_protocol="PGC SCZ" if "SCZ_PGC" in target else "FinnGen SCZ",

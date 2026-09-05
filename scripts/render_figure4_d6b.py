@@ -109,6 +109,10 @@ def format_annotation(label: str) -> str:
     return DISPLAY_LABELS.get(label, label.replace("PI x ", "PI × "))
 
 
+def as_bool(value: object) -> bool:
+    return str(value).strip().lower() in {"true", "1", "yes"}
+
+
 def read_table() -> pd.DataFrame:
     data = pd.read_csv(TABLE, sep="\t")
     required = {
@@ -119,7 +123,7 @@ def read_table() -> pd.DataFrame:
         "Enrichment_p_value",
         "Annotation_model_warning",
         "Annotation_model_error",
-        "Bonferroni_significant_168",
+        "Bonferroni_significant_984_warning_free",
     }
     missing = required.difference(data.columns)
     if missing:
@@ -130,14 +134,20 @@ def read_table() -> pd.DataFrame:
         raise ValueError("Expected 29 unique custom annotations")
     if data.duplicated(["published_label", "target_parameter"]).any():
         raise ValueError("Duplicate annotation-target row")
+    for column in [
+        "Annotation_model_warning",
+        "Annotation_model_error",
+        "Bonferroni_significant_984_warning_free",
+    ]:
+        data[column] = data[column].map(as_bool)
     return data
 
 
 def significant_annotation_order(data: pd.DataFrame) -> list[str]:
-    significant = set(data.loc[data["Bonferroni_significant_168"], "published_label"])
+    significant = set(data.loc[data["Bonferroni_significant_984_warning_free"], "published_label"])
     selected = [annotation for annotation in ANNOTATION_ORDER if annotation in significant]
-    if len(selected) != 20:
-        raise ValueError(f"Expected 20 unique significant annotations, found {len(selected)}")
+    if len(selected) != 9:
+        raise ValueError(f"Expected 9 warning-free global-family significant annotations, found {len(selected)}")
     return selected
 
 
@@ -222,8 +232,8 @@ def draw_profile(ax: plt.Axes, data: pd.DataFrame, domain: str, annotations: lis
                 row=row,
                 y=y + offsets[representation],
                 color=colors[representation],
-                significant=bool(row["Bonferroni_significant_168"]),
-                warning=bool(row["Annotation_model_warning"]),
+                significant=as_bool(row["Bonferroni_significant_984_warning_free"]),
+                warning=as_bool(row["Annotation_model_warning"]),
             )
 
     ax.set_title(domain, fontsize=7.0, fontweight="bold", pad=3)
@@ -250,7 +260,7 @@ def make_figure(data: pd.DataFrame) -> plt.Figure:
         draw_profile(ax, data, domain, annotations, show_y=i == 0)
 
     axes[0].text(-0.39, 1.08, "(a)", transform=axes[0].transAxes, ha="left", va="bottom", fontsize=8, fontweight="bold")
-    axes[0].text(-0.26, 1.08, "Custom annotation enrichment profile", transform=axes[0].transAxes, ha="left", va="bottom", fontsize=7, fontweight="bold")
+    axes[0].text(-0.26, 1.08, "Warning-free global-family profile", transform=axes[0].transAxes, ha="left", va="bottom", fontsize=7, fontweight="bold")
 
     legend_handles = [
         Line2D([0], [0], marker="o", color=PGC, markerfacecolor=PGC, markeredgecolor=PGC, lw=0, ms=4.8, label="PGC SCZ"),
