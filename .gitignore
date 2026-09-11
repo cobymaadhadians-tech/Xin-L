@@ -1,0 +1,17 @@
+# Local inputs, outputs and derived results
+data/
+results/
+outputs/
+*.rds
+*.log
+*.out
+*.err
+
+# Local environments and caches
+.figure_review/
+.analysis_work/
+.reproduction/
+analysis_work/
+__pycache__/
+*.py[cod]
+.DS_Store
