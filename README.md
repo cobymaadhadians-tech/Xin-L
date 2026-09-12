@@ -1,6 +1,6 @@
 # Core analysis scripts
 
-This repository contains the core scripts for the schizophrenia GWAS representation-sensitivity analysis. It is intentionally limited to the principal statistical workflow and its input checks. Raw GWAS files, derived results, figures, supplementary tables, extended upstream workflows and submission documents are supplied separately in the analysis archive.
+This repository contains the core scripts for the schizophrenia GWAS representation-sensitivity analysis. It is limited to the principal statistical workflow and its input checks. Raw GWAS files, derived results, figures, extended upstream workflows and other generated artifacts are supplied separately in the analysis archive.
 
 ## Principal workflow
 
@@ -18,4 +18,4 @@ The principal scripts are `recompute_common_snp_summaries.py`, `compute_r2_bias_
 
 Run the scripts from an analysis root containing the required `results/` inputs. Install the packages listed under `environment/` and provide the GWAS and LD-reference files through the local paths required by the selected workflow. The repository contains no raw GWAS summary statistics, result tables, credentials, private server files or figure-rendering code.
 
-For the complete reconstruction workflow, upstream scripts and derived data, use the accompanying analysis archive supplied with the manuscript.
+For the complete reconstruction workflow, upstream scripts and derived data, use the accompanying analysis archive.
